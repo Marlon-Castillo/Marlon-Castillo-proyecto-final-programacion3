@@ -1,9 +1,9 @@
 <?php
 try {
-    $host = "sql212.infinityfree.com";
-    $db   = "if0_41615119_dblibreria"; // tu BD
-    $user = "if0_41615119";
-    $pass = "aPnFoA23C6";
+    $host = "localhost";
+$db = "dblibreria";
+$user = "root";
+$pass = "";
     
     $conexion = new PDO("mysql:host=$host;dbname=$db", $user, $pass);
     $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

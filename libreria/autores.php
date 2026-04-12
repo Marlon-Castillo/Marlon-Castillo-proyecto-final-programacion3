@@ -1,8 +1,46 @@
+<?php
+session_start();
+if (!isset($_SESSION['usuario'])) {
+    header("Location: login.php");
+}
+?>
 <?php include("config/conexion.php"); ?>
 
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <style>
+body {
+    font-family: Arial;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    text-align: center;
+}
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    color: #007BFF;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+</style>
+
     <meta charset="UTF-8">
     <title>Autores</title>
 </head>
@@ -20,6 +58,19 @@
 
 <?php
 $query = $conexion->query("SELECT * FROM autores");
+
+echo "<div class='contenedor'>";
+
+foreach ($query as $autor) {
+    echo "
+    <div class='card'>
+        <h3>{$autor['nombre']} {$autor['apellido']}</h3>
+        <p><strong>Ciudad:</strong> {$autor['ciudad']}</p>
+    </div>
+    ";
+}
+
+echo "</div>";
 
 foreach ($query as $autor) {
     echo "<tr>
