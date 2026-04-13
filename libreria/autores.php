@@ -9,17 +9,28 @@ if (!isset($_SESSION['usuario'])) {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <style>
+    <meta charset="UTF-8">
+    <title>Autores</title>
+
+<style>
 body {
     font-family: Arial;
     background: linear-gradient(to right, #ff7e5f, #feb47b);
     text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: white;
+    margin-top: 20px;
 }
 
 .contenedor {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    padding: 20px;
 }
 
 .card {
@@ -29,60 +40,75 @@ body {
     width: 220px;
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
 }
 
 .card h3 {
+    margin: 0;
+}
+
+.card a {
+    text-decoration: none;
     color: #007BFF;
+    font-weight: bold;
+}
+
+.card a:hover {
+    color: #0056b3;
 }
 
 .card:hover {
     transform: scale(1.05);
-    transition: 0.3s;
+}
+
+.card p {
+    margin-top: 10px;
+    color: #555;
+}
+
+.boton-volver {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background: white;
+    color: #333;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+.boton-volver:hover {
+    background: #ddd;
 }
 </style>
 
-    <meta charset="UTF-8">
-    <title>Autores</title>
 </head>
 <body>
 
 <h2>Listado de Autores</h2>
 
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <th>Nombre</th>
-        <th>Apellido</th>
-        <th>Ciudad</th>
-    </tr>
+<div class="contenedor">
 
 <?php
 $query = $conexion->query("SELECT * FROM autores");
 
-echo "<div class='contenedor'>";
-
 foreach ($query as $autor) {
     echo "
     <div class='card'>
-        <h3>{$autor['nombre']} {$autor['apellido']}</h3>
+        <h3>
+            <a href='libros_autor.php?id={$autor['id_autor']}'>
+                {$autor['nombre']} {$autor['apellido']}
+            </a>
+        </h3>
         <p><strong>Ciudad:</strong> {$autor['ciudad']}</p>
     </div>
     ";
 }
-
-echo "</div>";
-
-foreach ($query as $autor) {
-    echo "<tr>
-        <td>{$autor['id_autor']}</td>
-        <td>{$autor['nombre']}</td>
-        <td>{$autor['apellido']}</td>
-        <td>{$autor['ciudad']}</td>
-    </tr>";
-}
 ?>
 
-</table>
+</div>
+
+<br>
+<a href="index.php" class="boton-volver">← Volver al inicio</a>
 
 </body>
 </html>
