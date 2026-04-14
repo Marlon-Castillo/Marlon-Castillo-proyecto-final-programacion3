@@ -77,7 +77,7 @@ button:hover {
 
 <h2>Listado de Libros</h2>
 
-<!-- 🔍 BUSCADOR -->
+<!-- BUSCADOR -->
 <form method="GET">
     <input type="text" name="buscar" placeholder="Buscar libro...">
     <button type="submit">Buscar</button>

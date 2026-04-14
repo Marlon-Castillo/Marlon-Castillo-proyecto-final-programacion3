@@ -9,8 +9,8 @@ if (!isset($_SESSION['usuario'])) {
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Autores</title>
+<meta charset="UTF-8">
+<title>Autores</title>
 
 <style>
 body {
@@ -66,6 +66,26 @@ h2 {
     color: #555;
 }
 
+/*  BUSCADOR */
+input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background: #007BFF;
+    color: white;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
 .boton-volver {
     display: inline-block;
     margin: 20px;
@@ -86,10 +106,27 @@ h2 {
 
 <h2>Listado de Autores</h2>
 
+<!-- BUSCADOR -->
+<form method="GET">
+    <input type="text" name="buscar" placeholder="Buscar autor...">
+    <button type="submit">Buscar</button>
+</form>
+
 <div class="contenedor">
 
 <?php
-$query = $conexion->query("SELECT * FROM autores");
+$buscar = isset($_GET['buscar']) ? $_GET['buscar'] : '';
+
+if ($buscar != '') {
+    $query = $conexion->query("
+        SELECT * FROM autores 
+        WHERE nombre LIKE '%$buscar%' 
+        OR apellido LIKE '%$buscar%' 
+        OR ciudad LIKE '%$buscar%'
+    ");
+} else {
+    $query = $conexion->query("SELECT * FROM autores");
+}
 
 foreach ($query as $autor) {
     echo "
