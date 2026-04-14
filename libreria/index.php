@@ -74,7 +74,7 @@ if (!isset($_SESSION['usuario'])) {
 
 <div class="container">
 
-<h1>📚 Librería Online</h1>
+<h1> Librería Online</h1>
 
 <ul>
     <li><a href="libros.php">Ver Libros</a></li>

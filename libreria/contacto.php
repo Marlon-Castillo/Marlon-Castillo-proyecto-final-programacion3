@@ -70,6 +70,9 @@ function validarFormulario() {
     <button type="submit">Enviar</button>
 </form>
 
+<br>
+<a href="index.php" class="boton-volver">← Volver al inicio</a>
+
 </body>
 </html>
 </div>
