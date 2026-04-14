@@ -103,10 +103,12 @@ if ($buscar != '') {
 foreach ($query as $libro) {
     echo "
     <div class='card'>
-        <h3>{$libro['titulo']}</h3>
-        <p><strong>ID:</strong> {$libro['id_titulo']}</p>
+        <h3>
+        <a href='detalle_libro.php?id={$libro['id_titulo']}' style='text-decoration:none; color:#007BFF;'>
+        {$libro['titulo']}
+        </a>
+        </h3>
         <p><strong>Tipo:</strong> {$libro['tipo']}</p>
-        <p><strong>Precio:</strong> {$libro['precio']}</p>
     </div>
     ";
 }
