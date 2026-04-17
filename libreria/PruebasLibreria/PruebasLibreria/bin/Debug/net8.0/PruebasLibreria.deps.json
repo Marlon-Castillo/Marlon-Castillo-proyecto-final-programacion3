@@ -1,0 +1,67 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PruebasLibreria/1.0.0": {
+        "dependencies": {
+          "Selenium.WebDriver": "4.43.0",
+          "Selenium.WebDriver.ChromeDriver": "147.0.7727.5700"
+        },
+        "runtime": {
+          "PruebasLibreria.dll": {}
+        }
+      },
+      "Selenium.WebDriver/4.43.0": {
+        "runtime": {
+          "lib/net8.0/WebDriver.dll": {
+            "assemblyVersion": "4.0.0.0",
+            "fileVersion": "4.0.0.0"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/linux/native/selenium-manager": {
+            "rid": "linux",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/osx/native/selenium-manager": {
+            "rid": "osx",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          },
+          "runtimes/win/native/selenium-manager.exe": {
+            "rid": "win",
+            "assetType": "native",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Selenium.WebDriver.ChromeDriver/147.0.7727.5700": {}
+    }
+  },
+  "libraries": {
+    "PruebasLibreria/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Selenium.WebDriver/4.43.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gsT0/pFeTUbyeUL9qcf/KLeII802sZrRNeb7YGKKOlFfT50MKxggWQW3Wh9p82IstCcXG91Ya9OLbu3tH/BRoQ==",
+      "path": "selenium.webdriver/4.43.0",
+      "hashPath": "selenium.webdriver.4.43.0.nupkg.sha512"
+    },
+    "Selenium.WebDriver.ChromeDriver/147.0.7727.5700": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oL7yjhkPCb4tXl3+OU3YUT8fNUeL9vrbkBwLJvifc4tIX2NEhU7HXw3YY7fi4ERUzH2cIz+3FCF22s6PTVH6kA==",
+      "path": "selenium.webdriver.chromedriver/147.0.7727.5700",
+      "hashPath": "selenium.webdriver.chromedriver.147.0.7727.5700.nupkg.sha512"
+    }
+  }
+}

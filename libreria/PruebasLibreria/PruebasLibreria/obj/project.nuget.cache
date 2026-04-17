@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "jVCBs5URgKM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\marlo\\OneDrive\\Escritorio\\PruebasLibreria\\PruebasLibreria\\PruebasLibreria.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marlo\\.nuget\\packages\\selenium.webdriver\\4.43.0\\selenium.webdriver.4.43.0.nupkg.sha512",
+    "C:\\Users\\marlo\\.nuget\\packages\\selenium.webdriver.chromedriver\\147.0.7727.5700\\selenium.webdriver.chromedriver.147.0.7727.5700.nupkg.sha512"
+  ],
+  "logs": []
+}

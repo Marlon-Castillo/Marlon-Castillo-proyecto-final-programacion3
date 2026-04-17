@@ -1,0 +1,3 @@
+﻿using PruebasLibreria;
+
+Pruebas.Ejecutar();
