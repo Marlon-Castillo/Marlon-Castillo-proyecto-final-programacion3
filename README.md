@@ -66,7 +66,7 @@ Funcionalidades probadas:
 - Envío de formularios  
 
  Código de pruebas automatizadas:  
- https://github.com/Marlon-Castillo/Marlon-Castillo-proyecto-final-programacion3/tree/main/pruebas  
+ https://github.com/Marlon-Castillo/Marlon-Castillo-proyecto-final-programacion3/tree/main/PruebasLibreria
 
 ---
 
